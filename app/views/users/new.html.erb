@@ -10,6 +10,14 @@
 		<%= f.label :name %></br>
 		<%= f.text_field :name %>
 	</div>
+	<div>
+		<%= f.label :password %></br>
+		<%= f.password_field :password %>
+	</div>
+	<div>
+		<%= f.label :password_confirmation, "Confirmation" %></br>
+		<%= f.password_field :password_confirmation %>
+	</div>
   	<div class="actions">
     	<%= f.submit "Sign up" %>
   	</div>
