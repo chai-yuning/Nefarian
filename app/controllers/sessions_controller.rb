@@ -1,7 +1,12 @@
 class SessionsController < ApplicationController
   
   def new
-    @title = "Sign in"
+    user = current_user
+    if user.nil?
+      @title = "Sign in"
+    else
+      redirect_to user
+    end
   end
   
   def create
