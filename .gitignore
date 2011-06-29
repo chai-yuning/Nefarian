@@ -9,4 +9,5 @@ doc/
 tmp/
 *.project
 *.lock
+db/*.sqlite3
 
