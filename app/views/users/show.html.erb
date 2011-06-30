@@ -1,4 +1,10 @@
 <h1><%= @user.name %></h1>
+<% unless @user.quests.empty? %>
+<table>
+	<%= render @quests %>
+</table>
+<%= will_paginate @quests %>
+<% end %>
 
 
 

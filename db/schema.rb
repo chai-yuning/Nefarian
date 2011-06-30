@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110627005551) do
+ActiveRecord::Schema.define(:version => 20110629225600) do
+
+  create_table "quests", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "quest_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "quests", ["created_at"], :name => "index_quests_on_created_at"
+  add_index "quests", ["user_id"], :name => "index_quests_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"
